@@ -1,11 +1,20 @@
-var score = 1; // Create a variable to store the score in
+var score = 0; // Create a variable to store the score in
 
-var title = new Title('Clicker game'); // Create a title element
-var button = new Button('click here', btnPress);   // Create a button element
-var hidden = new Button('Boo!');
+var title = new Title('Soviet Russian Prison'); // Create a title element
+var button = new Button('Start', btnPress);   // Create a button element
+var hidden = new Button('You discover that you are next for an abusive experiment!');
 hidden.hide();
-var hidden2 -= new Button('lmao');
+var hidden2 = new Button('You find key to room');
 hidden2.hide();
+var hidden3 = new Button('Room 1');
+hidden3.hide();
+var hidden33 = new Button('Room 2');
+hidden33.hide();
+var hidden333 = new Button('Room 3');
+hidden333.hide();
+var hidden4 = new Button('You find and equip a gasmask');
+hidden4.hide();
+
 var scr = new Text(score);                    // Create a text element
 
 
@@ -21,6 +30,18 @@ function btnPress() {
 
   if(score > 40) {
     hidden2.show(500);
+  }
+  if(score > 70) {
+    hidden3.show(500);
+  }
+  if(score > 70) {
+    hidden33.show(500);
+  }
+  if(score > 70) {
+    hidden333.show(500);
+  }
+  if(score > 90) {
+    hidden4.show(500);
   }
 
 
