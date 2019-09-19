@@ -1,9 +1,11 @@
 var score = 1; // Create a variable to store the score in
 
-var title = new Title('Welcome to the Game'); // Create a title element
-var button = new Button('hello', btnPress);   // Create a button element
+var title = new Title('Clicker game'); // Create a title element
+var button = new Button('click here', btnPress);   // Create a button element
 var hidden = new Button('Boo!');
 hidden.hide();
+var hidden2 -= new Button('lmao');
+hidden2.hide();
 var scr = new Text(score);                    // Create a text element
 
 
@@ -16,7 +18,10 @@ function btnPress() {
   if(score > 10) {
     hidden.show();
   }
-  if(score > 15) {
-    hidden.hide(500);
+
+  if(score > 40) {
+    hidden2.show(500);
   }
+
+
 }
