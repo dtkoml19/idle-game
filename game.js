@@ -12,8 +12,14 @@ var hidden33 = new Button('Room 2');
 hidden33.hide();
 var hidden333 = new Button('Room 3');
 hidden333.hide();
-var hidden4 = new Button('You find and equip a gasmask');
+var hidden4 = new Button('Door locked');
 hidden4.hide();
+//var hidden44 = new Button('Door locked');
+//hidden44.hide();
+//var hidden444 = new Button('Door unlocked');
+//hidden444.hide();
+//var hidden5 = new Button('You find and equip a gasmask');
+//hidden5.hide();
 
 var scr = new Text(score);                    // Create a text element
 
@@ -27,6 +33,13 @@ function btnPress() {
   if(score > 10) {
     hidden.show();
   }
+
+  function btnPress() {
+    score++;         // Increase the score
+    scr.edit(score); // Update the page with the new score
+    if(score > 100) {
+      hidden4.show();
+    }
 
   if(score > 40) {
     hidden2.show(500);
@@ -43,6 +56,9 @@ function btnPress() {
   if(score > 90) {
     hidden4.show(500);
   }
+  //if(score > 90) {
+    //hidden5.show(500);
+  //}
 
 
 }
