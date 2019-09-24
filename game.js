@@ -2,29 +2,45 @@ var score = 0; // Create a variable to store the score in
 
 var title = new Title('Soviet Russian Prison'); // Create a title element
 var button = new Button('Start', btnPress);   // Create a button element
-var hidden = new Button('You discover that you are next for an abusive experiment!');
+
+var hidden = new Text('You discover that you are next for an abusive experiment!');
 hidden.hide();
-var hidden2 = new Button('You find key to room');
+var hidden2 = new Text('You find key to room');
 hidden2.hide();
-var hidden3 = new Button('Room 1');
+var hidden3 = new Button('Room 1', nothing);
 hidden3.hide();
-var hidden33 = new Button('Room 2');
+var hidden33 = new Button('Room 2', lab);
 hidden33.hide();
-var hidden333 = new Button('Room 3');
+var hidden333 = new Button('Room 3', locked);
 hidden333.hide();
 var hidden4 = new Button('Door locked');
 hidden4.hide();
-//var hidden44 = new Button('Door locked');
-//hidden44.hide();
-//var hidden444 = new Button('Door unlocked');
-//hidden444.hide();
-//var hidden5 = new Button('You find and equip a gasmask');
-//hidden5.hide();
+var hidden5 = new Text('You wear the gas mask');
+hidden5.hide();
+var hidden55 = new Text('you sprint for the exit');
+hidden55.hide();
+var hidden555 = new Text('you hear a gunshot, a tear gas bullet flies past you');
+hidden555.hide();
+var hidden6 = new Button('Unequip gas mask');
+hidden6.hide();
+
 
 var scr = new Text(score);                    // Create a text element
 
 
 setInterval(btnPress, 1000);   // Set up a loop
+
+function nothing() {
+  scr.edit('You find nothing')
+}
+
+function lab() {
+  scr.edit('You find a gas mask in the lab')
+}
+
+function locked() {
+  scr.edit('need different key')
+}
 
 
 function btnPress() {
@@ -34,28 +50,31 @@ function btnPress() {
     hidden.show();
   }
 
-  //function btnPress() {
-    //score++;
-    //scr.edit(score);
-    //if(score > 100) {
-      //hidden4.show();
-    //}
 
-  if(score > 40) {
+
+  if(score > 30) {
     hidden2.show(500);
   }
-  if(score > 70) {
+  if(score > 40) {
     hidden3.show(500);
   }
-  if(score > 70) {
+  if(score > 40) {
     hidden33.show(500);
   }
-  if(score > 70) {
+  if(score > 40) {
     hidden333.show(500);
   }
-
-  if(score > 90) {
+  if(score > 60) {
     hidden5.show(500);
+  }
+  if(score > 70) {
+    hidden55.show(500);
+  }
+  if(score > 80) {
+    hidden555.show(500);
+  }
+  if(score > 90) {
+    hidden6.show(500);
   }
 
 
