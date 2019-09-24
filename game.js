@@ -34,12 +34,12 @@ function btnPress() {
     hidden.show();
   }
 
-  function btnPress() {
-    score++;         // Increase the score
-    scr.edit(score); // Update the page with the new score
-    if(score > 100) {
-      hidden4.show();
-    }
+  //function btnPress() {
+    //score++;
+    //scr.edit(score);
+    //if(score > 100) {
+      //hidden4.show();
+    //}
 
   if(score > 40) {
     hidden2.show(500);
@@ -53,12 +53,10 @@ function btnPress() {
   if(score > 70) {
     hidden333.show(500);
   }
+
   if(score > 90) {
-    hidden4.show(500);
+    hidden5.show(500);
   }
-  //if(score > 90) {
-    //hidden5.show(500);
-  //}
 
 
 }
