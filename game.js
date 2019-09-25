@@ -21,8 +21,13 @@ var hidden55 = new Text('you sprint for the exit');
 hidden55.hide();
 var hidden555 = new Text('you hear a gunshot, a tear gas bullet flies past you');
 hidden555.hide();
-var hidden6 = new Button('Unequip gas mask');
+var hidden6 = new Button('Unequip gas mask', dead);
 hidden6.hide();
+var hidden66 = new Text('If you didnt unequip and patiently waited please continue');
+hidden66.hide();
+var hidden666 = new Text('You survive the mustard with your gas mask and continue to the exit and escape')
+hidden666.hide();
+
 
 
 var scr = new Text(score);                    // Create a text element
@@ -40,6 +45,9 @@ function lab() {
 
 function locked() {
   scr.edit('need different key')
+}
+function dead() {
+  scr.edit('You died lol, RESTART')
 }
 
 
@@ -75,6 +83,12 @@ function btnPress() {
   }
   if(score > 90) {
     hidden6.show(500);
+  }
+  if(score > 115) {
+    hidden66.show(500);
+  }
+  if(score > 125){
+    hidden666.show(500);
   }
 
 
