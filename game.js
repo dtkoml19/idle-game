@@ -27,6 +27,8 @@ var hidden66 = new Text('If you didnt unequip and patiently waited please contin
 hidden66.hide();
 var hidden666 = new Text('You survive the mustard with your gas mask and continue to the exit and escape')
 hidden666.hide();
+var hidden7 = new Text('The End');
+hidden7.hide();
 
 
 
@@ -89,6 +91,9 @@ function btnPress() {
   }
   if(score > 125){
     hidden666.show(500);
+  }
+  if(score > 130){
+    hidden7.show(500);
   }
 
 
